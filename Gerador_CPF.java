@@ -35,8 +35,6 @@ public class geraCPF {
     	  cpf.add(number); 
       }
       
-      System.out.println("CPF SEM DIGITOS VERIFICADORES: " + cpf);
-      
         //Calculo primeiro digito
         for (Integer i:cpf) {
             if(i <= 9){
@@ -52,7 +50,6 @@ public class geraCPF {
         
         //Chamando a função que retorna o digito verificador
         int digitoUm = verificaDigito(soma, digito, resto);
-        System.out.println("O Primeiro digito do CPF é: " + digitoUm);
         
         cpf.add(digitoUm);
 
@@ -77,10 +74,14 @@ public class geraCPF {
         
          //Chamando a função que retorna o digito verificador
          int digitoDois = verificaDigito(soma, digito, resto);
-         System.out.println("O Segundo digito do CPF é: " + digitoDois);
+       
          cpf.add(digitoDois);
         
-         System.out.println("O CPF GERADO É: " + cpf);
+         
+         System.out.print("O CPF gerado é: ");
+         for(Integer cpfImpressao:cpf) {
+        	 System.out.print(cpfImpressao);
+         }
         
 
     	}
