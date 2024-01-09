@@ -7,21 +7,6 @@ public class geraCPF {
 
     /*         GERADOR DE CPF			*/
 	
-
-	//Função que retorna o digito verificador
-    public static int verificaDigito (int soma, int digito, int resto){
-        resto = soma % 11;
- 
-        if(resto < 2){
-            digito = 0;
-        }else{
-            digito = 11 - resto;
-        }
-        
-        return digito;
-    }
-
-
     public static void main(String args[]) {
     	
       ArrayList<Integer> resultados = new ArrayList<>();
@@ -49,7 +34,7 @@ public class geraCPF {
     	}
         
         //Chamando a função que retorna o digito verificador
-        int digitoUm = verificaDigito(soma, digito, resto);
+        int digitoUm = verificaDigito.verificaDigito(soma, digito, resto);
         
         cpf.add(digitoUm);
 
@@ -73,7 +58,7 @@ public class geraCPF {
      
         
          //Chamando a função que retorna o digito verificador
-         int digitoDois = verificaDigito(soma, digito, resto);
+         int digitoDois = verificaDigito.verificaDigito(soma, digito, resto);
        
          cpf.add(digitoDois);
         
@@ -82,8 +67,8 @@ public class geraCPF {
          for(Integer cpfImpressao:cpf) {
         	 System.out.print(cpfImpressao);
          }
-        
 
+    
     	}
     
     }
